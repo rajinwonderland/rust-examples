@@ -3,7 +3,7 @@ on run
 end run
 
 on pasteText()
-    set inputfile to POSIX file "/Users/RajInMacLand/Exercism/rust/simulate/main.rs"
+    set inputfile to POSIX file "/Users/RajInMacLand/Exercism/rust/simulate/src/lib.rs"
     try
       set getClip to the clipboard as text
     on error
@@ -22,7 +22,7 @@ on pasteText()
     tell application "System Events"
       repeat with i from 1 to count characters of getClip
         keystroke (character i of getClip)
-        delay 0.1
+        delay 0.3
       end repeat
     end tell
     tell application "System Events"
